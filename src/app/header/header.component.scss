@@ -1,0 +1,27 @@
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+#header {
+  text-align: center;
+  padding: 70px 0;
+  background: $secondary-color;
+  color: $primary-text;
+  .title {
+    display: block;
+    font-size: $title-size;
+    margin: 5px 0 10px;
+  }
+  .description {
+    display: block;
+    font-size: 20px;
+  }
+  .nav {
+    display: flexbox;
+    margin-top: 50px;
+    li {
+      display: inline-flex;
+      a {
+        @include simple_button;
+      }
+    }
+  }
+}

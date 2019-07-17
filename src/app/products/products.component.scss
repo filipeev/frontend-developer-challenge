@@ -1,0 +1,32 @@
+#products {
+  padding: 48px 0 95px;
+  #product-list {
+    display: flex;
+    flex-flow: row wrap;
+    app-product-card {
+      display: inline-block;
+      text-align: left;
+      flex: 1;
+      margin: 0 40px 30px;
+    }
+  }
+  .error-message {
+    display: block;
+    text-align: center;
+  }
+  .loading-content {
+    height: 823px;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    .loading {
+      position: absolute;
+      display: block;
+      top: calc(50% - 20px);
+      left: calc(50% - 20px);
+    }
+  }
+  button {
+    margin: 0 auto;
+  }
+}

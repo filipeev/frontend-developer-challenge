@@ -1,0 +1,45 @@
+@import "../../../assets/scss/variables";
+.product-card {
+  img {
+    display: block;
+    text-align: center;
+    margin: 0 auto 20px;
+  }
+  .product-name {
+    display: block;
+    color: $secondary-text;
+    font-size: $secondary-size;
+    margin-bottom: 10px;
+  }
+  .product-description {
+    display: block;
+    color: $secondary-text;
+    font-size: $primary-size;
+    margin-bottom: 15px;
+    line-height: 18px;
+  }
+  .old-price {
+    display: block;
+    color: $secondary-text;
+    font-size: $primary-size;
+    margin-bottom: 5px;
+  }
+  .price {
+    display: block;
+    color: $secondary-text;
+    font-size: $tertiary-size;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .credit-price {
+    display: block;
+    color: $secondary-text;
+    font-size: $primary-size;
+    margin-bottom: 5px;
+  }
+  button {
+    margin-top: 15px;
+    width: 100%;
+    margin: 15px 0;
+  }
+}

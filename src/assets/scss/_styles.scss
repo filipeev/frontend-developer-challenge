@@ -1,0 +1,54 @@
+@import "_reset.scss";
+@import "_variables.scss";
+@import "_mixins.scss";
+
+// BASICS
+body {
+    width: 100%;
+    font-family: $main-font;
+}
+select, input, textarea {
+    @include desktop {
+        -webkit-appearance: none;
+    }
+    padding: 8px 20px;
+    border-radius: 0;
+    box-sizing: border-box;
+    height: 45px;
+    width: 100%;
+    outline: none;
+    resize: none;
+    color: $tertiary-text;
+    background: #fff;
+    border: 1px solid $secondary-color;
+}
+button {
+  @include simple_button;
+}
+label {
+  font-size: $primary-size;
+  color: $secondary-text;
+  display: block;
+  margin-bottom: 7px;
+}
+
+// CONTENT HELPERS
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+.section-title {
+  display: block;
+  text-align: center;
+  font-size: $tertiary-size;
+  color: $secondary-text;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+.section-description {
+  display: block;
+  font-size: $secondary-size;
+  color: $secondary-text;
+  margin-bottom: 39px;
+}
+
