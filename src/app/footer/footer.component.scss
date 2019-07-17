@@ -1,0 +1,14 @@
+@import "../../assets/scss/variables";
+
+#footer {
+  margin-top: 80px;
+  background: $primary-color;
+  text-align: center;
+  padding: 70px;
+  color: $tertiary-color;
+  span {
+    display: block;
+    margin: 8px;
+    font-size: $primary-size
+  }
+}

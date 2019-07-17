@@ -1,0 +1,85 @@
+@import "_variables.scss";
+
+// MEDIA
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+// TOOLS
+@mixin simple_button {
+  display: block;
+  padding: 10px 35px;
+  margin: 0 20px;
+  text-decoration: none;
+  background: $tertiary-color;
+  color: $secondary-text;
+  font-size: $secondary-size;
+  border-radius: 4px;
+  transition: all .5s;
+  outline: none;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0px 0px 9px 0px #bfbaba;
+  }
+}
+@mixin button {
+  border: none;
+  cursor: pointer;
+  font-size: $secondary-size;
+  text-transform: uppercase;
+  position: relative;
+  letter-spacing: 0.50em;
+  font-weight: bold;
+  margin: 0 auto;
+  box-sizing: border-box;
+  height: 40px;
+  line-height: 20px;
+  padding: 10px 15px;
+  background: transparent;
+  outline: none;
+  color: $primary-text;
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transform: skewX(0deg);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: -2;
+    background-color: $secondary-color;
+  }
+  &::before {
+    left: 0;
+  }
+  &::after {
+    right: 0;
+  }
+  &:hover {
+    &::before {
+      top: -5px;
+      left: 0;
+      transform: skewX(30deg);
+    }
+    &::after {
+      top: 5px;
+      transform: skewX(30deg);
+    }
+  }
+}
+
+@mixin gradient($from, $to, $p1, $p2) {
+  background: -moz-linear-gradient(top, $from $p1, $to $p2); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, $from $p1,$to $p2); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, $from $p1,$to $p2); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=0 ); /* IE6-9 */
+}

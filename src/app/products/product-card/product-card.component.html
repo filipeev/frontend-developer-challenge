@@ -1,0 +1,9 @@
+<div class="product-card">
+  <img [src]="productData.image" [alt]="productData.description" [title]="productData.description">
+  <span class="product-name">{{ productData.name }}</span>
+  <p class="product-description">{{ productData.description }}</p>
+  <span class="old-price">De: R$ {{ productData.oldPrice | currency:'':'':'':'pt-BR' }}</span>
+  <strong class="price">Por: R$ {{ productData.price | currency:'':'':'':'pt-BR' }}</strong>
+  <span class="credit-price">ou {{ productData.installments.count }}x de R$ {{ productData.installments.value | currency:'':'':'':'pt-BR' }}</span>
+  <button class="comprar">Comprar</button>
+</div>

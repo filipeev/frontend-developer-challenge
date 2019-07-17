@@ -1,0 +1,19 @@
+<div id="news-letter">
+  <div class="container">
+    <strong class="section-title">Compartilhe a novidade</strong>
+    <span class="section-description">Quer que seus amigos também ganhem a lista personalizada deles? Preencha agora!</span>
+    <form action="">
+      <div class="form-wrapper">
+        <div class="field">
+          <label for="name">Nome do seu amigo:</label>
+          <input id="name" type="text" required placeholder="Digite o nome do seu amigo"  oninvalid="this.setCustomValidity('Informe o nome')" oninput="this.setCustomValidity('')">
+        </div>
+        <div class="field">
+          <label for="email">E-mail:</label>
+          <input id="email" type="email" required placeholder="Digite o e-mail" oninvalid="this.setCustomValidity('O campo de email deve conter um email válido')" oninput="this.setCustomValidity('')">
+        </div>
+      </div>
+      <button type="submit">Enviar agora</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<div id="products">
+  <div class="container">
+    <strong class="section-title">Sua seleção especial</strong>
+    <!-- If product list is empty or some error ocurred, handle it in template -->
+    <div id="product-list" *ngIf="productsList.products else handlerTemplate">
+      <app-product-card *ngFor="let productItem of productsList.products" [productData]="productItem"></app-product-card>
+      <button *ngIf="!isLoading else loadMore" (click)="getProducts()">Ainda mais produtos aqui!</button>
+      <ng-template #loadMore>
+          <div class="loading-content">
+            <img class="loading" src="../../assets/images/loader.gif" alt="loading">
+          </div>
+        </ng-template>
+    </div>
+    <ng-template #handlerTemplate>
+      <!-- Throw error or show loader -->
+      <strong *ngIf="error else loading" class="error-message">Desculpe, ocorreu algum erro na listagem de produtos: {{ error.statusText }}</strong>
+      <ng-template #loading>
+        <div class="loading-content">
+          <img class="loading" src="../../assets/images/loader.gif" alt="loading">
+        </div>
+      </ng-template>
+    </ng-template>
+  </div>
+</div>
